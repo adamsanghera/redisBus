@@ -8,9 +8,9 @@ import (
 	"github.com/go-redis/redis"
 )
 
-//ConnectToServer ...
+//initConnectToServer ...
 // Attempts to Connect to Redis.
-func ConnectToServer(attemptLimt int) error {
+func initConnectToServer(attemptLimt int) error {
 	fmt.Println("Connecting to Redis...")
 
 	Client = redis.NewClient(&redis.Options{
