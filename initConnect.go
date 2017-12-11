@@ -11,6 +11,7 @@ import (
 //initConnectToServer ...
 // Attempts to Connect to Redis.
 func initConnectToServer(attemptLimt int) error {
+	fmt.Println("WARNING! RedisBus looks for the redis address and port in environment variables REDIS_ADDRESS and REDIS_PORT, respectively.")
 	fmt.Println("Connecting to Redis...")
 
 	Client = redis.NewClient(&redis.Options{
